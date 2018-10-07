@@ -1,5 +1,5 @@
-task helloWorld << {
-  print "I am saying hello in the year of our lord: ${new Date()}"
+task helloWorld {
+  println "I am saying hello in the year of our lord: ${new Date()}"
 }
 
 
