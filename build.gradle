@@ -1,5 +1,12 @@
+def projectDescription = "Gradle is a build automation tool"
+
 task helloWorld {
   println "I am saying hello in the year of our lord: ${new Date()}"
+}
+
+task showRootProject {
+  println "Project Description: ${projectDescription}"
+  println project.rootProject.properties
 }
 
 
