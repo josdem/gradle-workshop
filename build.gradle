@@ -1,5 +1,9 @@
 def projectDescription = "Gradle is a build automation tool"
 
+ext{
+  gradleTechtalkVersion = "0.0.1"
+}
+
 task helloWorld {
   println "I am saying hello in the year of our lord: ${new Date()}"
 }
@@ -7,6 +11,11 @@ task helloWorld {
 task showRootProject {
   println "Project Description: ${projectDescription}"
   println project.rootProject.properties
+}
+
+task showProjectContent {
+  println project.tasks
+  println "group:artifact:$gradleTechtalkVersion"
 }
 
 
