@@ -18,4 +18,14 @@ task showProjectContent {
   println "group:artifact:$gradleTechtalkVersion"
 }
 
+task first {
+  println "Hello World, this is my First Task!"
+}
+
+task second {
+  println "Hello World from my Second Task!"
+}
+
+second.dependsOn rootProject.tasks['first']
+
 
