@@ -1,0 +1,13 @@
+ext {
+	configurationDir = ".gradleWorkshop/"
+	currentEnvironment = "development"
+}
+
+def filesToInclude = ["credentials-${currentEnvironment}.yaml"]
+def toDirectory = 'src/main/resources/'
+task settingEnvironment(type:Copy){
+	from configurationDir
+	into toDirectory
+	include filesToInclude
+	rename { String fileName -> fileName.replace("-${currentEnvironment}", '') }
+}
